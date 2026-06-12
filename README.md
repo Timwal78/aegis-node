@@ -102,6 +102,14 @@ For defense-in-depth beyond process kill, pass `networkNamespace: true` (require
 - [ ] Per-tool rate limits (not just global API call rate)
 - [ ] Windows job-object based hard isolation (currently falls back to `taskkill`)
 
+## Pairs with agent-top
+
+[`agent-top`](https://github.com/Timwal78/agent-top) is the live dashboard — "`htop` for AI agents" — showing token burn rate, $ cost, API call rate, and loop warnings in your terminal. Aegis-Node is the enforcement layer; agent-top is how you *watch* it work.
+
+```bash
+npm install aegis-node agent-top
+```
+
 ## More from ScriptMasterLabs
 
 Building agent-native financial infrastructure: x402 payment rails (`proof402-middleware`), autonomous trading pipelines with the same circuit-breaker philosophy in production, Pine Script v6 indicator suites, and the NEXUS-402 agent marketplace.
