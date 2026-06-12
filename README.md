@@ -8,7 +8,7 @@
      Watcher trips on: token burn rate / API call rate / repeated-action loop
      -> instant SIGKILL of agent process tree + best-effort network sever -->
 
-[![npm](https://img.shields.io/npm/v/aegis-node)](https://www.npmjs.com/package/@timothywalton/aegis-node)
+[![npm](https://img.shields.io/npm/v/%40timothywalton%2Faegis-node)](https://www.npmjs.com/package/@timothywalton/aegis-node)
 [![License](https://img.shields.io/badge/license-MIT-green)]()
 
 ---
