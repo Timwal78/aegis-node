@@ -1,0 +1,27 @@
+{
+  "name": "aegis-node",
+  "version": "0.1.0",
+  "description": "Hardware-agnostic kill switch for autonomous AI agents. Monitors token burn rate, API call rate, and action-loop patterns on an isolated thread; instantly kills the agent process and severs its network access when limits are breached. Zero dependencies.",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "bin": {
+    "aegis": "bin/cli.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node test/run.js"
+  },
+  "keywords": [
+    "ai-agents", "kill-switch", "safety", "guardrail", "autonomous-agents",
+    "circuit-breaker", "mcp", "llm", "agent-safety", "rate-limit"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Timwal78/aegis-node"
+  },
+  "homepage": "https://www.scriptmasterlabs.com",
+  "author": "Script Master Labs LLC"
+}
