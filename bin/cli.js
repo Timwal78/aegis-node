@@ -3,7 +3,7 @@
  * AEGIS-NODE CLI
  * ──────────────
  * Usage:
- *   npx aegis-node [options] -- <command> [args...]
+ *   npx -p @timothywalton/aegis-node aegis [options] -- <command> [args...]
  *
  * Options (env-overridable):
  *   --max-tokens-per-min <n>       (AEGIS_MAX_TOKENS_PER_MIN)
@@ -19,7 +19,7 @@
  * become no-ops (set to Infinity) until you wire in reporting.
  *
  * Example:
- *   npx aegis-node --max-tokens-per-min 200000 --max-api-calls-per-min 120 \
+ *   npx -p @timothywalton/aegis-node aegis --max-tokens-per-min 200000 --max-api-calls-per-min 120 \
  *     -- python my_agent.py
  */
 "use strict";
@@ -75,7 +75,7 @@ function envLimits() {
 const parsed = parseArgs(process.argv.slice(2));
 if (!parsed.cmd.length) {
   console.error(
-    "AEGIS-NODE: no command given.\n\nUsage: npx aegis-node [options] -- <command> [args...]"
+    "AEGIS-NODE: no command given.\n\nUsage: npx -p @timothywalton/aegis-node aegis [options] -- <command> [args...]"
   );
   process.exit(2);
 }

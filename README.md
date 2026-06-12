@@ -8,7 +8,7 @@
      Watcher trips on: token burn rate / API call rate / repeated-action loop
      -> instant SIGKILL of agent process tree + best-effort network sever -->
 
-[![npm](https://img.shields.io/npm/v/aegis-node)](https://www.npmjs.com/package/aegis-node)
+[![npm](https://img.shields.io/npm/v/aegis-node)](https://www.npmjs.com/package/@timothywalton/aegis-node)
 [![License](https://img.shields.io/badge/license-MIT-green)]()
 
 ---
@@ -28,7 +28,7 @@ Aegis-Node is that thing. It runs your agent as a child process, watches it from
 ## Install & run (under 60 seconds)
 
 ```bash
-npx aegis-node --max-tokens-per-min 200000 --max-api-calls-per-min 120 -- python my_agent.py
+npx -p @timothywalton/aegis-node aegis --max-tokens-per-min 200000 --max-api-calls-per-min 120 -- python my_agent.py
 ```
 
 That's it. Your agent runs exactly as before, but if it blows past 200k tokens/min or 120 API calls/min, Aegis kills it immediately.
@@ -36,7 +36,7 @@ That's it. Your agent runs exactly as before, but if it blows past 200k tokens/m
 For loop detection and token tracking, your agent reports metrics via the programmatic API:
 
 ```javascript
-const { AegisNode } = require("aegis-node");
+const { AegisNode } = require("@timothywalton/aegis-node");
 
 const aegis = new AegisNode({
   command: "python",
@@ -107,7 +107,7 @@ For defense-in-depth beyond process kill, pass `networkNamespace: true` (require
 [`agent-top`](https://github.com/Timwal78/agent-top) is the live dashboard — "`htop` for AI agents" — showing token burn rate, $ cost, API call rate, and loop warnings in your terminal. Aegis-Node is the enforcement layer; agent-top is how you *watch* it work.
 
 ```bash
-npm install aegis-node agent-top
+npm install @timothywalton/aegis-node @timothywalton/agent-top
 ```
 
 ## More from ScriptMasterLabs
